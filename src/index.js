@@ -10,7 +10,7 @@ function App(props) {
   //useEffect -> for side effect functions of the component
   // -> Runs when the component is rendered, and every time the component is updated
   useEffect (() => {
-    alert(`You have clicked ${coutimes`)
+    alert(`You have clicked ${counter} times`)
   }, [counter])
   return (
     <div>
