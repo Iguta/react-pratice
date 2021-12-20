@@ -10,27 +10,27 @@ const initialContacts = ['John', 'Mary', 'Grace', 'Georgina'];
 const ContactManager = () => {
 
 const [contacts, setContacts] = useState(initialContacts); 
-function addContact(e) {
-  e.preventDefault();
-  initialContacts.push("Dave")
-}
 
-useEffect(()=> {
-    setContacts(initialContacts);
-})
+function handleSubmit(e){
+  
+  const newCcontact = e.target.elements.contactField.value;
+  setContacts([...contacts, newCcontact]);
+  e.preventDefault();
+}
   return (
     <Wrapper>
-      <form>
-        <input type="text" placeholder="Enter Contact"></input>
-        <button type="submit"
-        onClick={addContact(event)}>Add</button>
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Enter Contact" name="contactField"></input>
+        <button type="submit">Add</button>
       </form>
       <ContactContent>
+      <ul>
         {
           contacts.map( contact => (
             <li>{contact}</li>
           ))
         }
+        </ul>
       </ContactContent>
     </Wrapper>
   );

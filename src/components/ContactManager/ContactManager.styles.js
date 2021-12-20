@@ -12,13 +12,18 @@ export const Wrapper = styled.div`
 `;
 
 export const ContactContent = styled.div`
-  margin-top: 10px;
-  display:block;
+  margin: 0 auto;
+  min-width:200px;
+  max-width:250px;
+  ul{
+    list-style: none;
+  }
   li{
     background-color:grey;
     margin:10px;
     min-height:30px;
     text-align:center;
     border-radius:20px;
+    
   }
 `;
