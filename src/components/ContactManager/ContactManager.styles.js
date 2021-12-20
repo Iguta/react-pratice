@@ -18,6 +18,9 @@ export const ContactContent = styled.div`
   ul{
     list-style: none;
   }
+  li:nth-child(odd){
+    background-color:rgb(0, 125, 128);
+  }
   li{
     background-color:grey;
     margin:10px;
